@@ -10,7 +10,7 @@ Application.start(:nerves_bootstrap)
 
 config :webchika_firmware,
   target: Mix.target(),
-  led_pin: System.get_env("NERVES_WEBCHIKA_GPIO_PIN")
+  led_pin: String.to_integer(System.get_env("NERVES_WEBCHIKA_GPIO_PIN"))
 
 # Customize non-Elixir parts of the firmware. See
 # https://hexdocs.pm/nerves/advanced-configuration.html for details.

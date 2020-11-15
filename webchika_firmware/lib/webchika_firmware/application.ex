@@ -34,6 +34,8 @@ defmodule WebchikaFirmware.Application do
       # Children for all targets except host
       # Starts a worker by calling: WebchikaFirmware.Worker.start_link(arg)
       # {WebchikaFirmware.Worker, arg},
+      {WebchikaFirmware.Worker, %{}},
+      {WebchikaFirmware.Led, %{led: nil}}
     ]
   end
 
