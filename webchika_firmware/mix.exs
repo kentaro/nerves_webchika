@@ -31,6 +31,7 @@ defmodule WebchikaFirmware.MixProject do
   defp deps do
     [
       # Dependencies for all targets
+      {:webchika_api, path: "../webchika_api"},
       {:nerves, "~> 1.7.0", runtime: false},
       {:shoehorn, "~> 0.7.0"},
       {:ring_logger, "~> 0.8.1"},
