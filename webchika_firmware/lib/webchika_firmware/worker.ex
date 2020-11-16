@@ -20,7 +20,7 @@ defmodule WebchikaFirmware.Worker do
 
   def handle_cast(:stop_blinking, state) do
     Logger.debug("Stopping blinking")
-    Process.exit(__MODULE__, :kill) # restart the process
+    Process.exit(self(), :kill) # restart the process
     {:noreply, state}
   end
 
